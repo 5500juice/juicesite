@@ -13,7 +13,7 @@
 
       currentPage = pageId;
 
-      const pages = ['home', 'about', 'contact', 'pics'];
+      const pages = ['home', 'about', 'contact', 'pics', 'projects'];
       pages.forEach(id => {
         document.getElementById(`page-${id}`).style.display = (id === pageId) ? 'block' : 'none';
       });
