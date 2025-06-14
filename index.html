@@ -4,100 +4,78 @@
   <meta charset="UTF-8">
   <title>5500juice.com</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <div id="boot-screen">
-    <div class="boot-text">
-      Juicy Internet Browser<br/>
-      Booting up...
-    </div>
-  </div>
+  <!-- Boot screen -->
+  <div id="boot-screen"><div class="boot-text">Juicy Internet Browser<br/>Booting up...</div></div>
 
+  <!-- Main Browser Window -->
   <div class="browser-window">
+    <!-- Title Bar -->
     <div class="title-bar">
       <span class="title-text">5500juice's Computer - Juicy Internet Browser</span>
       <div class="window-controls">
         <button class="min"><i class="fa-solid fa-window-minimize"></i></button>
-        <button class="max"> <i class="fa-regular fa-square"></i></button>
-        <button class="close"> <i class="fa-solid fa-x"></i></button>
+        <button class="max"><i class="fa-regular fa-square"></i></button>
+        <button class="close"><i class="fa-solid fa-x"></i></button>
       </div>
     </div>
 
+    <!-- Toolbar -->
     <div class="toolbar">
-      <button class="btn-back">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Back_icon_95.png/16px-Back_icon_95.png" alt="" > Back
-      </button>
-      <button class="btn-forward">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Forward_icon_95.png/16px-Forward_icon_95.png" alt=""> Forward
-      </button>
-      <button class="btn-refresh">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Refresh_icon_95.png/16px-Refresh_icon_95.png" alt=""> Refresh
-      </button>
-      <button>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Home_icon_95.png/16px-Home_icon_95.png" alt=""> Home
-      </button>
+      <button class="btn-back"> Back</button>
+      <button class="btn-forward"> Forward</button>
+      <button class="btn-refresh"> Refresh</button>
+      <button class="btn-home"> Home</button>
       <input type="text" placeholder="https://www.5500juice.pdg/home" />
       <button>Go</button>
     </div>
 
+    <!-- Navigation Tabs -->
     <div class="tabs">
       <button onclick="switchPage('home')"><i class="fa-solid fa-house"></i> Home</button>
-      <button onclick="switchPage('about')"> <i class="fa-solid fa-address-card"></i> About Me</button>
+      <button onclick="switchPage('about')"><i class="fa-solid fa-address-card"></i> About Me</button>
       <button onclick="switchPage('contact')"><i class="fa-solid fa-envelope"></i> Contact</button>
       <button onclick="switchPage('pics')"><i class="fa-solid fa-image"></i> Favorite Pics</button>
-	  <button onclick="switchPage('projects')"><i class="fa-solid fa-bolt"></i> Projects</button>
+      <button onclick="switchPage('projects')"><i class="fa-solid fa-bolt"></i> Projects</button>
     </div>
 
-    <div class="content-area" id="page-home">
-      <h1>Welcome!</h1>
-      <p>I believe in modern-day eugenics.</p>
-    </div>
-
+    <!-- Page Content Areas -->
+    <div class="content-area" id="page-home"><h1>Welcome!</h1><p>I believe in modern-day eugenics.</p></div>
     <div class="content-area" id="page-about" style="display: none;">
       <h1>About me</h1>
       <p>I hate Daniel with a burning passion.</p>
-      <p>I spend way too much time on Discord.</p>
-      <p>I spend way too much money on gambling.</p>
+      <p>I spend way too much time on Discord and gambling.</p>
       <p>I am $225,000 in debt.</p>
-      <p>I hate Daniel with a burning passion.</p>
     </div>
-
     <div class="content-area" id="page-contact" style="display: none;">
       <h1>Contact</h1>
-      <p>Discord: @5500juice</p>
-      <p>Telegram: @ezflipwhips</p>
-      <p>Email: juicepouchpersonal@gmail.com</p>
+      <p>Discord: @5500juice<br>Telegram: @ezflipwhips<br>Email: juicepouchpersonal@gmail.com</p>
     </div>
-
     <div class="content-area" id="page-pics" style="display: none;">
       <h1>Favorite Pics</h1>
-      <p>Here are some of my favorite images:</p>
       <div class="img-container">
-      
         <img src="https://i.imgur.com/ki2cQvE.png" class="fixed-size-img" alt="Kitten">
         <img src="https://i.imgur.com/xl52ATp.png" class="fixed-size-img" alt="Bear">
         <img src="https://i.imgur.com/CNzBGl0.png" class="fixed-size-img" alt="Beard">
-		<img src="https://i.imgur.com/Dv4huJ8.png" class="fixed-size-img"
+        <img src="https://i.imgur.com/Dv4huJ8.png" class="fixed-size-img" alt="Image">
+      </div>
     </div>
+    <div class="content-area" id="page-projects" style="display: none;">
+      <h1>Projects</h1>
+      <a href="https://5500juice.github.io/blackjackcardcounter/">Blackjack Card Counter</a>
+    </div>
+  </div>
 
- 
+  <!-- Image Modal -->
   <div id="image-modal" class="modal" style="display: none;">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
-      <img id="modal-img" src="" alt="Full Size" />
+      <img id="modal-img" src="" alt="Full Size">
     </div>
-	
-	
-    <div class="content-area" id="page-projects" style="display: none;">
-      <h1>Projects</h1>
-      <p><a href="https://5500juice.github.io/blackjackcardcounter/">Blackjack Card Counter</a></p>
-      <div>
-	  </div>
   </div>
 
-
   <script src="script.js"></script>
-
 </body>
 </html>
