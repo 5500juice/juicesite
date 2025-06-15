@@ -16,15 +16,14 @@
   </div>
   
   <script>
-    const audio = document.getElementById("Audio");
+    const audio = new Audio('Cream_Nut.wav'); // Define the audio element
 
-    // Set up a one-time click listener
-    function enableAudio() {
-      audio.play().catch((err) => console.log("Autoplay blocked:", err));
-      document.removeEventListener("click", enableAudio);
-    }
+function enableAudio() {
+  audio.play().catch((err) => console.log("Autoplay blocked:", err));
+  document.removeEventListener("click", enableAudio);
+}
 
-    document.addEventListener("click", enableAudio);
+document.addEventListener("click", enableAudio); // Attach the listener
   </script>
 	
   <!-- Boot screen -->
