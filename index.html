@@ -20,7 +20,7 @@
 
     // Set up a one-time click listener
     function enableAudio() {
-      audio.play().catch((err) => console.log("Autoplay blocked:", err));
+      audio.play()).catch((err) => console.log("Autoplay blocked:", err));
       document.removeEventListener("click", enableAudio);
     }
 
