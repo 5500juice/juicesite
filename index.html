@@ -14,6 +14,18 @@
 		<source src="Cream_Nut.wav" type="audio/wav">
 	</audio>
   </div>
+  
+  <script>
+    const audio = document.getElementById("Audio");
+
+    // Set up a one-time click listener
+    function enableAudio() {
+      audio.play().catch((err) => console.log("Autoplay blocked:", err));
+      document.removeEventListener("click", enableAudio);
+    }
+
+    document.addEventListener("click", enableAudio);
+  </script>
 	
   <!-- Boot screen -->
   <div id="boot-screen"><div class="boot-text">Juicy Internet Browser<br/>Booting up...</div></div>
